@@ -27,7 +27,6 @@ const App = () => {
 
   const handleAddContact = async () => {
     try {
-      // This is a dummy POST request; it won't persist data on the server
       const response = await axios.post(apiUrl, newContact);
       setContacts([...contacts, response.data]);
       setNewContact({ name: "", email: "", phone: "" });
@@ -38,7 +37,6 @@ const App = () => {
 
   const handleUpdateContact = async (contactId) => {
     try {
-      // This is a dummy PUT request; it won't persist data on the server
       const response = await axios.put(`${apiUrl}/${contactId}`, newContact);
       const updatedContacts = contacts.map((contact) =>
         contact.id === contactId ? response.data : contact
@@ -52,7 +50,6 @@ const App = () => {
 
   const handleDeleteContact = async (contactId) => {
     try {
-      // This is a dummy DELETE request; it won't persist data on the server
       await axios.delete(`${apiUrl}/${contactId}`);
       const updatedContacts = contacts.filter(
         (contact) => contact.id !== contactId
