@@ -37,7 +37,17 @@ const App = () => {
 
   const handleUpdateContact = async (contactId) => {
     try {
-      const response = await axios.put(`${apiUrl}/${contactId}`, newContact);
+      const contactToUpdate = contacts.find(
+        (contact) => contact.id === contactId
+      );
+      if (!contactToUpdate) {
+        console.error("Contact not found for update.");
+        return;
+      }
+      const response = await axios.put(
+        `${apiUrl}/${contactId}`,
+        contactToUpdate
+      );
       const updatedContacts = contacts.map((contact) =>
         contact.id === contactId ? response.data : contact
       );
