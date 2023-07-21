@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: auto;
+  padding: auto;
+  background-color: #f0f0f0;
+}
+
+
+.app-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+h1 {
+  text-align: center;
+}
+
+.add-contact,
+.contact-list {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.contact-item {
+  margin-right: 10px; /* Adds space between name and email */
+}
+
+.contact-info {
+  margin-bottom: 10px; /* Adds vertical space between contact info rows */
+}
+
+.add-contact h2,
+.contact-list h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.add-contact input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-btn,
+.update-btn,
+.delete-btn {
+  padding: 10px 20px;
+  margin-right: 15px;
+  border: darkcyan;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.add-btn {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.update-btn {
+  background-color: #28a745;
+  color: #ffffff;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: #ffffff;
+}
+
+.contact-list ul {
+  list-style: circle;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #898888;
+  padding: 10px 0;
+}
+
+.contact-list li:last-child {
+  border-bottom: solid;
+}
